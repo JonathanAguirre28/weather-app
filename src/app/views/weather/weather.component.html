@@ -1,1 +1,25 @@
-<p>weather works!</p>
+<section class="weather" >
+  <div class="weather__title">
+    <h1 class="weather__title-text">CLIMA DE LOS PROXIMOS 15 DIAS DE LAS DIFERENTES PROVINCIAS DE ARGENTINA</h1>
+  </div>
+  <div class="weather__form">
+    <form [formGroup]="weather">
+      <input formControlName="provinces" type="text">
+    </form>
+  </div>
+  <br>
+  <div class="weather__button">
+    <button class="weather__button-content" (click)="traerProvincia()">TraerProvincia</button>
+  </div>
+  <div class="weather__loading" *ngIf="isLoading">Cargando</div>
+  <div class="weather__card" *ngIf="climaProvincia.length && !isLoading">
+      <app-weather-card *ngFor="let day of climaProvincia"
+      [date]="day.datetime"
+      [iconSrc]="'assets/icons/' + day.icon + '.png'"
+      [temperature]="'Temperatura ' + day.temp +'°'"
+      [max]="'Max ' + day.tempmax +'°'"
+      [min]="'Min ' + day.tempmin +'°'"
+     >
+      </app-weather-card>
+    </div>
+</section>

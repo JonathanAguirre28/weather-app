@@ -1,1 +1,13 @@
-<app-weather-card></app-weather-card>
+<h1 class="container">CLIMA DE ARGENTINA EN LOS PROXIMOS 15 DIAS</h1>
+<div class="container__home">
+    <app-weather-card 
+    *ngFor="let day of data" 
+    [date]="day.datetime"
+    [iconSrc]="'assets/icons/' + day.icon + '.png'"
+    [temperature]="'Temperatura ' + day.temp +'°'"
+    [max]="'Max ' + day.tempmax +'°'"
+    [min]="'Min ' + day.tempmin +'°'"
+   >
+    </app-weather-card>
+  </div>
+  

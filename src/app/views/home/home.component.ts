@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
+
 
 @Component({
   selector: 'app-home',
@@ -7,8 +10,11 @@ import { WeatherService } from 'src/app/services/weather.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  data: any;
-  constructor(private weatherService: WeatherService){ }
+  data: any[] = []
+  imageSrc: SafeResourceUrl;
+  constructor(private weatherService: WeatherService, private sanitizer: DomSanitizer){ 
+    this.imageSrc = this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/sunny.svg');
+  }
 
   ngOnInit(): void {
       this.getWeather()
@@ -17,10 +23,9 @@ export class HomeComponent implements OnInit{
   getWeather(){
     this.weatherService.getWatherInfo().subscribe({
       next: (res) => {
-        this.data = res;
-        console.log(this.data)
+        console.log(res)
+        this.data = res.days;
       }
     })
   }
-
 }

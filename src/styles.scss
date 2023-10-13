@@ -35,5 +35,20 @@ $Weather-app-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  margin: 0;
+  padding: 0;
+} 
+
+body { 
+  margin: 0; 
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  flex-wrap: wrap;
+  background-image: url("https://images.pexels.com/photos/246079/pexels-photo-246079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); 
+  font-family: Roboto, "Helvetica Neue", sans-serif; }

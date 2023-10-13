@@ -1,0 +1,39 @@
+.weather{
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        &-text {
+            color: rgb(225, 250, 5);
+        }
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        &-content {
+            background: none;
+            border: none;
+            outline: none;
+            border: 2px solid greenyellow;
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+    &__card {
+       display: flex;
+       gap: 15px;
+       flex-wrap: wrap;
+    }
+    &__loading {
+        font-size: 36px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+}

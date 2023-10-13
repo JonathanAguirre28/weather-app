@@ -1,11 +1,28 @@
 <section class="weather">
-<div>
-    <h2>titulo</h2>
-</div>
-<div>
-    <img src="" alt="">
-</div>
-<div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda nostrum cumque odit vitae enim iusto necessitatibus totam dignissimos molestias nesciunt saepe, non facere nihil reprehenderit! Id ipsam veritatis facilis harum!</p>
-</div>
+
+  <div class="weather__date">
+    <h2>{{ date }}</h2>
+  </div>
+  <div class="weather__image">
+    <img [src]="iconSrc" alt="weathericon">
+  </div>
+  <div class="weather__title">
+    <h2>{{ title }}</h2>
+  </div>
+  <div class="weather__subtitle">
+    <h2>{{ subtitle }}</h2>
+  </div>
+  <div class="weather__text">
+    <h2>{{ temperature }}</h2>
+  </div>
+
+  <div class="weather__temperature">
+    <div class="weather__min">
+      <h2>{{ min }}</h2>
+    </div>
+    <div class="weather__max">
+      <h2>{{ max }}</h2>
+    </div>
+  </div>
+
 </section>
