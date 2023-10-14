@@ -19,3 +19,17 @@
         }
     }
 }
+
+@media (min-width: 0px) and (max-width: 700px) {
+    .navbar {
+        width: 100%;
+        &__title {
+            font-size: 10px;
+        }
+        &__link {
+            &-text {
+                font-size: 12px;
+            }
+        }
+    }
+}

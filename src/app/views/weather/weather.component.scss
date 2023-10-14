@@ -27,6 +27,9 @@
     }
     &__card {
        display: flex;
+       margin: 20px;
+       margin-bottom: 30px;
+       padding: 20px;
        gap: 15px;
        flex-wrap: wrap;
     }
@@ -35,5 +38,16 @@
         color: white;
         font-weight: bold;
         text-align: center;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+    .weather {
+        &__title {
+            &-text {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
     }
 }
