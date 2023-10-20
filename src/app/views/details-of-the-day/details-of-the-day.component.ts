@@ -15,7 +15,5 @@ export class DetailsOfTheDayComponent implements OnInit {
   }
   getWeather() {
     this.data = this.weatherService.getDataForHours()
-    console.log(this.data)
   }
-
 }

@@ -11,6 +11,7 @@
   height: 350px;
   background-color: white;
   cursor: pointer;
+  font-size: 14px;
 
   &__image {
     display: flex;
@@ -30,6 +31,14 @@
   &__temperature {
     display: flex;
     justify-content: space-evenly;
+    &-min{
+      display: flex;
+      text-align: center;
+    }
+    &-max{
+      display: flex;
+      text-align: center;
+    }
   }
 
   &:hover {
@@ -50,11 +59,13 @@
     &__text {
       font-size: 12px;
     }
-    &__min {
-      font-size: 12px;
-    }
-    &__max {
+    &__temperature{
+      &-min{
+        font-size: 12px;
+      }
+      &-max {
       font-size: 12px;
     }
   }
+}
 }
