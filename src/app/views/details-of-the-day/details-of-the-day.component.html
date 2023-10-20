@@ -1,0 +1,16 @@
+<section class="details">
+  <div class="datails__title">
+    <h1 class="datails__title-text">PRONOSTICO DEL TIEMPO POR HORA EN ARGENTINA</h1>
+  </div>
+  <div class="datails__card">
+    <app-weather-card 
+    *ngFor="let hours of data" 
+    [date]="hours.datetime" 
+    [iconSrc]="'assets/icons/' + hours.icon + '.png'" 
+    [temperature]="'Temperatura ' + hours.temp +'°'" 
+    [max]="'Humedad ' + hours.Humidity +'°'" 
+    [min]="'Sensacion termica ' + hours.Feelslike +'°'"
+    >
+    </app-weather-card>
+  </div>
+</section>

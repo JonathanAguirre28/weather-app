@@ -1,23 +1,30 @@
-.container{
+.datails {
+  &__title {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
     color: rgb(225, 250, 5);
-    font-size: 24px;
-&__home {
+  }
+  &__card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 50px;
 
-}
+  }
 }
 
+
+
+
 @media (min-width: 0px) and (max-width: 700px) {
-    .container{
+  .datails {
+    &__title {
+      &-text {
         font-size: 16px;
         text-align: center;
+      }
     }
+  }
 }

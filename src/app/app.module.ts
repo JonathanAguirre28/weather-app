@@ -11,6 +11,7 @@ import { HomeComponent } from './views/home/home.component';
 import { WeatherComponent } from './views/weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DetailsOfTheDayComponent } from './views/details-of-the-day/details-of-the-day.component';
 
 
 
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     WeatherCardComponent,
     FooterComponent,
     HomeComponent,
-    WeatherComponent
+    WeatherComponent,
+    DetailsOfTheDayComponent,
   ],
   imports: [
     BrowserModule,
