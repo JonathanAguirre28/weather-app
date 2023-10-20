@@ -14,13 +14,8 @@ export class DetailsOfTheDayComponent implements OnInit {
    this.getWeather()
   }
   getWeather() {
-    this.weatherService.getWatherInfo().subscribe({
-      next: (res) => {
-        console.log(res)
-        this.data = res.days[0].hours;
-
-      }
-    })
+    this.data = this.weatherService.getDataForHours()
+    console.log(this.data)
   }
 
 }

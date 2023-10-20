@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 
 
@@ -12,7 +13,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class HomeComponent implements OnInit{
   data: any[] = []
   imageSrc: SafeResourceUrl;
-  constructor(private weatherService: WeatherService, private sanitizer: DomSanitizer){ 
+  constructor(private weatherService: WeatherService, private sanitizer: DomSanitizer, private router: Router){ 
     this.imageSrc = this.sanitizer.bypassSecurityTrustResourceUrl('assets/icons/sunny.svg');
   }
 
@@ -23,9 +24,13 @@ export class HomeComponent implements OnInit{
   getWeather(){
     this.weatherService.getWatherInfo().subscribe({
       next: (res) => {
-        console.log(res)
         this.data = res.days;
       }
     })
+  }
+
+  getDetails(hours: any){
+    this.weatherService.setDataForHours(hours);
+    this.router.navigate(['/details-of-the-day']);
   }
 }

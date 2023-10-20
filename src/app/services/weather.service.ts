@@ -6,10 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WeatherService {
+  dataForHours: any;
 
   constructor(private http:HttpClient) { }
 
   getWatherInfo(): Observable<any> {
     return this.http.get('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/argentina?unitGroup=metric&key=AZNXEXBQX245H74XZ6REB3T3N&contentType=json')
+  }
+
+  setDataForHours(data: any){
+     this.dataForHours = data;
+  }
+
+  getDataForHours(){
+    return this.dataForHours;
   }
 }
